@@ -2,14 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Usuario;
 use App\Models\Categoria;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 
 class AjaxControler extends Controller
 {
+    public function verificarCorreo(Request $request)
+    {
+       if  ($request->get('email'))
+       {
+          
+           $email=$request->get('email');
+           $correo=Usuario::all()->where('email','=',$email);
+           $data=DB::table("usuarios")
+           ->where('email',$email)
+           ->count();
+          
+           if($data)
+           {
+            echo 'not_unique';
+           }
+           else
+           {
+            echo 'unique';
+           }
+       }
+    }
     public function updateUsuario(Request $request, $id)
     {
 

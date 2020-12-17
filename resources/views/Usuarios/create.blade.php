@@ -20,6 +20,10 @@
         <input id="nombre" type="text" name="nombre" class="form-control">
     </div>
     <div class="form-group">
+        <label for="email">Correo Electronico:</label>
+        <input id="email" type="text" name="email" class="form-control">
+    </div>
+    <div class="form-group">
         <label for="a_paterno">Apellido paterno del usuario:</label>
         <input id="a_paterno" type="text" name="a_paterno" class="form-control">
     </div>

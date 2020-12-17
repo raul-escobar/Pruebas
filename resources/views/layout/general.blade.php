@@ -5,10 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/bootstrap-4.5.3-dist/css/bootstrap.min.css">
+
+<script src="{{asset("js/app.js")}}"></script>
+<script src="/bootstrap-4.5.3-dist/js/jquery-3.5.1.min.js"></script>
+<script src="/bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/axios.js"></script>
   @yield('estilos')
-  <script src="/bootstrap-4.5.3-dist/js/jquery-3.5.1.min.js"></script>
-  <script src="/bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/axios.js"></script>
+  
   @yield('escripts')
 </head>
 
@@ -123,6 +126,8 @@
     @yield('escripts2')
 </body>
 
+
+
 </html>
 
 {{-- yield('estilos')
@@ -132,3 +137,4 @@ yield('breadcumb')
 yield('content')
 yield('escripts2')
  --}}
+
